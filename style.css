@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+}
+
+:root {
+    --hearder-background-color:rgba(51, 65, 87, 0.831);
+    --body-background-color: #ffffff;
+    --text-color: #ffffff;
+    --nav-color: #000000;
+    --side-color:#ffffff;
+    --body-color: #ffffff;
+    --search-bar: rgb(255, 255, 255);
+    --search-text: #000000;
+    --button-background-color: #000000;
+    --a-hover-color: #1b223a;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--body-background-color);
+}
+
+body.dark{
+    --hearder-background-color:rgba(24, 24, 34, 0.879);
+    --body-background-color: #1d2237;
+    --text-color: #ffffff;
+    --nav-color: #ffffff;
+    --side-color:#ffffff;
+    --body-color: #ffffff;
+    --search-bar: rgb(0, 0, 0);
+    --search-text: #ffffff;
+    --button-text-color: #ffffff;
+    --button-background-color: #344cffd2;
+    --a-hover-color: #0083f5;
+}
+
+/* HEADER ========== */
+header {
+    background-color: var(--hearder-background-color);
+    height: 600px;
+    color: var(--text-color);
+}
+hr {
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+/* NAVBAR */
+.navbar {
+    padding-top: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    color: var(--text-color);
+    font-size: 20px;
+}
+li {
+    display: inline-block;
+    list-style: none;
+}
+li a{
+    color: var(--text-color);
+    font-size: 18px;
+    margin-right: 25px;
+    font-weight: bold;
+}
+li a:hover{
+    color: var(--a-hover-color);
+}
+
+/* Dark and Light mode with search Box */
+.darkLight-searchBox-login {
+    display: flex;
+}
+.darkLight-searchBox {
+    display: flex;
+    align-items: center;
+}
+.darkLight-searchBox .dark-light,
+.darkLight-searchBox .searchToggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 17px 20px;
+    margin: 3px;
+    
+}
+.searchToggle i,
+.dark-light i {
+    position: absolute;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.dark-light i.sun {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dark-light.active i.sun {
+    opacity: 1;
+    pointer-events: auto;
+}
+.dark-light.active i.moon {
+    opacity: 0;
+    pointer-events: none;
+}
+/* Search Box */
+.searchToggle i.cancel {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.searchToggle.active i.cancel {
+    opacity: 1;
+    pointer-events: auto;
+}
+.searchToggle.active i.search {
+    opacity: 0;
+    pointer-events: none;
+}
+.search-Box {
+    position: relative;
+}
+.search-Box .search-field {
+    position: absolute;
+    bottom: -85px;
+    right: 5px;
+    height: 50px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--nav-color);
+    padding: 3px;
+    border-radius: 6px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.searchToggle.active ~ .search-field {
+    opacity: 1;
+    bottom: -85px;
+    pointer-events: auto;
+}
+.search-field::before {
+    content: '';
+    position: absolute;
+    right: 14px;
+    top: -4px;
+    height: 12px;
+    width: 12px;
+    background-color: var(--nav-color);
+    transform: rotate(-45deg);
+    z-index: -1;
+}
+.search-field input {
+    height: 100%;
+    width: 100%;
+    padding: 0 45px 0 15px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--nav-color);
+    background-color: var(--search-bar);
+}
+.search-field i {
+    position: absolute;
+    color: var(--nav-color);
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Login */
+.login {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+}
+.login a {
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    margin-left: 10px;
+    border-radius: 6px;
+    padding: 8px 15px;
+    width: 100%;
+    font-size: 15px;
+}
+.login a:hover {
+    background-color: var(--a-hover-color);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    margin: 25px;
+
+}
+.hero .image-hero img {
+    height: 450px;
+}
+.hero .intro {
+    margin: 20px;
+
+}
+.intro h1 {
+    font-size: 70px;
+    margin: 10px 0;
+}
+.intro h3 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+.intro p {
+    margin: 25px 0;
+    margin-bottom: 40px;
+}
+.intro span a {
+    margin: 35px;
+    color: #ffffff;
+    text-decoration: underline;
+}
