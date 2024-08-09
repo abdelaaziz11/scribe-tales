@@ -18,6 +18,8 @@
     --button-background-color: #000000;
     --a-hover-color: #1b223a;
     --section-color: #000000;
+    --footer-text-color: #000000;
+    --footer-background-color: rgb(247, 240, 230);
 }
 
 body {
@@ -37,6 +39,8 @@ body.dark{
     --button-background-color: #344cffd2;
     --a-hover-color: #0083f5;
     --section-color: #ffffff;
+    --footer-text-color: #ffffff;
+    --footer-background-color: #000000;
 }
 
 /* HEADER ========== */
@@ -232,7 +236,7 @@ li a:hover{
     margin: 10px 0;
 }
 .intro p {
-    margin: 25px 0;
+    margin: 25px 40px 25px 0;
     margin-bottom: 40px;
 }
 .intro span a {
@@ -243,7 +247,7 @@ li a:hover{
 
 /* MAIN */
 
-main section {
+main .main-section {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -252,16 +256,15 @@ main section {
     background-color: var(--body-background-color);
 }
 
-section .images-user {
+.main-section .images-user {
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: space-around;
 }
-main section .images-ai {
+main .main-section .images-ai {
     height: 400px;
     width: 400px;
-    background-color: #000000;
 }
 
 /* USER */
@@ -290,4 +293,56 @@ main section .images-ai {
 .bx-user-circle,
 .user-paragraph {
     color: var(--search-text);
+}
+.user-paragraph p{
+    text-align: center;
+}
+.images-ai {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.images-ai .images img {
+    width: 128.3px;
+    height: 72px;
+    margin: 0;
+    padding: 0;
+}
+.images-ai .images {
+    border: var(--nav-color) 3px solid;
+    border-radius: 1px;
+    height: 300px;
+    background-color: #000000;
+}
+
+/* FOOTER */
+.footer {
+    height: 25vh;
+    
+}
+.footer .footer-section {
+    height: 100%;
+    width: 100%;
+    color: var(--footer-text-color);
+    align-items: center;
+    background-color: var(--footer-background-color);
+}
+.footer .footer-section .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+.footer .footer-section .footer-content span {
+    font-size: 37px;
+    margin: 5px;
+}
+.footer .footer-section .footer-content p {
+    font-size: 14px;
+}
+.footer hr {
+    background-color: #000000;
 }
