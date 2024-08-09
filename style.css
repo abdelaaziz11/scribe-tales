@@ -12,10 +12,12 @@
     --nav-color: #000000;
     --side-color:#ffffff;
     --body-color: #ffffff;
-    --search-bar: rgb(255, 255, 255);
+    --search-bar: #ffffff;
     --search-text: #000000;
+    --button-text-color: #ffffff;
     --button-background-color: #000000;
     --a-hover-color: #1b223a;
+    --section-color: #000000;
 }
 
 body {
@@ -34,6 +36,7 @@ body.dark{
     --button-text-color: #ffffff;
     --button-background-color: #344cffd2;
     --a-hover-color: #0083f5;
+    --section-color: #ffffff;
 }
 
 /* HEADER ========== */
@@ -202,7 +205,8 @@ li a:hover{
     width: 100%;
     font-size: 15px;
 }
-.login a:hover {
+.login a:hover,
+.btn-explore:hover {
     background-color: var(--a-hover-color);
 }
 
@@ -247,7 +251,9 @@ main section {
     width: 100%;
     background-color: var(--body-background-color);
 }
+
 section .images-user {
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -258,16 +264,30 @@ main section .images-ai {
     background-color: #000000;
 }
 
+/* USER */
 .user {
     height: 400px;
     width: 400px;
-    background-color: rgb(192, 192, 201);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
+.user div {
+    margin: 10px 20px;
+}
 
 .user .icon-user i{
     font-size: 80px;
+}
+.btn-explore {
+    background-color: var(--button-background-color);;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+.bx-user-circle,
+.user-paragraph {
+    color: var(--search-text);
 }
